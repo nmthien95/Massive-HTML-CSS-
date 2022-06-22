@@ -1,0 +1,49 @@
+.design {
+    .design__top {
+        @extend %inline-block;
+    }
+    .design__bottom {
+        .design__item {
+            position: relative;
+            padding: $pd-0;
+            border: 1px solid $color-gray-3;
+            border-radius: $border-radius-2;
+            .design__icon {
+                position: absolute;
+                top: -30px;
+                left: 30px;
+                width: 60px;
+                height: 60px;
+                text-align: center;
+                line-height: 60px;
+                border-radius: $border-radius-2;
+                background: $color-black-2;
+                box-shadow: 0 0 0 10px $color-white-0;
+                transition: 0.5s;
+                &:hover {
+                    background-color: $color-default-theme
+                }
+                i {
+                    @include styleIcon($color-white-0, $fs-6 - 6, $line-height-3);
+                }
+            }
+            .design__title {
+                h4 {
+                    @include styleText ($color-black-0, $fs-5, $fw-0);
+                    margin: $mg-0 0;
+                    letter-spacing: 1px;
+                }
+            }
+            .design__desc {
+                color: $color-black-1;
+            }
+        }
+    }
+    @include reponsive ("large") {
+        .design__bottom {
+            .design__item {
+                margin-bottom: $mg-1;
+            }
+        }
+    }
+}

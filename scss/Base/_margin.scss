@@ -1,0 +1,11 @@
+$margin-bottom:0,
+$mg-4,
+$mg-0,
+$mg-1,
+$mg-3,
+$mg-8;
+@each $m-b in $margin-bottom {
+    .m-b-#{$m-b} {
+        margin-bottom: $m-b;
+    }
+}

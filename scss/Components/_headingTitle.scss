@@ -1,0 +1,39 @@
+.heading-title {
+    margin-bottom: $mg-1;
+}
+
+.border-short-bottom {
+    h3 {
+        position: relative;
+        margin-bottom: $mg-0;
+        padding-bottom: $pd-2;
+        letter-spacing: $letter-spacing-0 + 0.5;
+        @include styleText($color-black-0, $fs-3, $fw-0);
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 60px;
+            left: 50%;
+            height: 2px;
+            margin-left: -31px;
+            background: $color-black-3;
+        }
+    }
+}
+
+.halft-txt {
+    width: 60%;
+    margin: 0 auto;
+    color: $color-black-1;
+    line-height: $line-height-0;
+}
+
+@include reponsive ("medium") {
+    .border-short-bottom h3 {
+        font-size: $fs-5 !important;
+    }
+    .halft-txt {
+        width: 80%;
+    }
+}

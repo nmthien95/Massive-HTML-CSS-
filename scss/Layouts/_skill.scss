@@ -1,0 +1,100 @@
+.skills {
+    background-image: url(../img/banner-2.jpg);
+    @extend %backgroundImg;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .skills__overplay {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $color-gray-4;
+        content: '';
+    }
+    .skills__content {
+        position: relative;
+        z-index: 5;
+        .skills__left {
+            display: table;
+            width: 100%;
+            height: 400px;
+            h3 {
+                @include styleText ( $color-white-0, $fs-3, $fw-0);
+                display: table-cell;
+                letter-spacing: $letter-spacing-1 + 1;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+        .skills__right {
+            padding: 0 $pd-0;
+            color: $color-white-0;
+            h4 {
+                @include styleText($color-white-0, $fs-5, $fw-0)
+            }
+            p {
+                color: $color-white-0;
+                line-height: $line-height-1;
+                margin-bottom: $mg-3;
+            }
+            .skills__progress {
+                padding-top: $pd-0;
+                .skills__item {
+                    background: $color-gray-5;
+                    height: 20px;
+                    overflow: visible;
+                    margin-top: $mg-4;
+                    margin-bottom: $mg-1;
+                    letter-spacing: $letter-spacing-0 + 0.5;
+                    font-weight: $fw-2;
+                    border-radius: 0;
+                    .progress-bar {
+                        @include styleText($color-black-2, $fs-0 - 3, $fw-0);
+                        background: $color-white-0;
+                        position: relative;
+                        overflow: visible;
+                        padding-left: $pd-2;
+                        text-align: left;
+                        span {
+                            display: inline-block;
+                            background: $color-gray-6;
+                            position: absolute;
+                            top: -28px;
+                            right: -5px;
+                            min-width: 25px;
+                            height: 20px;
+                            line-height: 20px;
+                            padding: 0 8px;
+                            text-align: center;
+                            letter-spacing: 0;
+                            border-radius: $border-radius-0;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -2px;
+                                left: 15px;
+                                display: block;
+                                width: 5px;
+                                height: 5px;
+                                background: $color-gray-6;
+                                transform: rotate(45deg);
+                                border: 1px solid $color-gray-6;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include reponsive("screen-1") {
+        .skills__overplay {
+            display: none;
+        }
+        .skills__left {
+            margin-bottom: $pd-0;
+        }
+    }
+}

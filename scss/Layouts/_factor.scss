@@ -1,0 +1,34 @@
+.factor {
+    background: $color-black-7;
+    .factor__item {
+        text-align: center;
+        .factor__icon {
+            display: inline-block;
+            margin-bottom: $mg-4;
+            i {
+                display: inline-block;
+                padding-right: $pd-2;
+                font-size: $fs-6 - 6;
+                color: $color-white-0;
+            }
+            h1 {
+                display: inline-block;
+                margin-bottom: 0;
+                @include styleText($color-white-0, $fs-6, $fw-0);
+                letter-spacing: 2px;
+            }
+        }
+        .factor__info {
+            span {
+                display: block;
+                letter-spacing: $letter-spacing-0 + 0.5;
+                color: $color-white-0;
+            }
+        }
+    }
+    @include reponsive ("medium") {
+        .factor__item {
+            padding: $pd-0 0;
+        }
+    }
+}

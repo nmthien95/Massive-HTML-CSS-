@@ -1,0 +1,82 @@
+footer {
+    color: #6f7273;
+    .footer__top {
+        padding: $pd-5 + 10 0;
+        background: $color-black-2;
+        a {
+            display: block;
+        }
+        h5 {
+            letter-spacing: $letter-spacing-0 + 0.5;
+            @include styleText($color-white-0, $fs-0 + 1, $fw-0);
+        }
+        .footer__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                border-bottom: 1px solid $color-black-0;
+                a {
+                    color: $color-white-6;
+                    display: block;
+                    line-height: $line-height-4;
+                    i {
+                        padding-right: $pd-2 +5;
+                    }
+                }
+            }
+        }
+        .foooter__r-work {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+            // grid-template-columns: 65px 65px 65px;
+            // gap: 10px;
+            li {
+                display: inline-block;
+                a {
+                    width: 55px;
+                    height: 55px;
+                    margin: 0 $mg-4 $mg-4 0;
+                    img {
+                        @extend %img;
+                    }
+                }
+            }
+        }
+    }
+    .footer__bottom {
+        @extend %inline-block;
+        padding: $pd-4 0;
+        border-top: 1px solid $color-gray-12;
+        background: $color-black-7;
+        span {
+            margin-top: 10px;
+            a {
+                color: $color-white-0;
+            }
+        }
+        .footer__link {
+            a {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                border-radius: 50%;
+                border: 1px solid $color-gray-2;
+                display: inline-block;
+                margin: 0 $mg-5 0 0;
+                @include styleText($color-gray-2, $fs-2, $fw-0);
+                text-align: center;
+            }
+        }
+    }
+    @include reponsive("large") {
+        .footer__list {
+            margin-bottom: $mg-3 + 10 !important;
+        }
+        .footer__link {
+            margin-top: $mg-4;
+        }
+    }
+}

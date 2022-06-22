@@ -1,0 +1,30 @@
+%backgroundImg {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+%img {
+    width: 100%;
+    height: auto;
+}
+
+%container-mid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+%page-content {
+    display: inline-block;
+    width: 100%;
+    padding: 100px 0;
+}
+
+%inline-block {
+    display: inline-block;
+    width: 100%;
+}

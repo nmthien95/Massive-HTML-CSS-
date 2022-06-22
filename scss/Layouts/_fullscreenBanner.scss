@@ -1,0 +1,35 @@
+.banner {
+    background-image: url(../img/index-banner-2.jpg);
+    @extend %backgroundImg;
+    height: 100vh;
+    position: relative;
+    .banner__content {
+        @extend %container-mid;
+        z-index: 3;
+        color: $color-white-0;
+        .banner__title {
+            h1 {
+                letter-spacing: $letter-spacing-1;
+                font-size: $fs-1;
+                font-weight: $fw-1;
+                line-height: normal;
+            }
+            h3 {
+                letter-spacing: $letter-spacing-1 + 1;
+                font-size: $fs-2;
+            }
+        }
+    }
+    @include reponsive ("medium") {
+        .banner__content {
+            .banner__title {
+                h1 {
+                    font-size: $fs-6 - 6;
+                }
+                h3 {
+                    font-size: $fs-5;
+                }
+            }
+        }
+    }
+}

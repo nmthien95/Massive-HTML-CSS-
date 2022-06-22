@@ -1,0 +1,95 @@
+.blog {
+    .blog__title {
+        @extend %inline-block;
+    }
+    .blog__post {
+        .blog__img {
+            position: relative;
+            img {
+                @extend %img;
+            }
+            p {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: $pd-2;
+                color: $color-white-0;
+                background: $color-gray-4;
+            }
+        }
+        .blog__desk {
+            height: 309px;
+            padding: $pd-0 0;
+            .blog__cat {
+                list-style: none;
+                display: flex;
+                padding: 0;
+                li {
+                    margin-right: $mg-4;
+                    a {
+                        text-transform: uppercase;
+                        @include styleText($color-gray-9, $fs-0 - 1, $fw-2);
+                        letter-spacing: $letter-spacing-0 + 0.5;
+                        transition: .3s;
+                        &:hover {
+                            color: $color-default-theme;
+                        }
+                    }
+                }
+            }
+            h4 {
+                margin-bottom: 10px;
+                letter-spacing: $letter-spacing-0 + 0.5;
+                a {
+                    @include styleText ($color-black-2, $fs-5, $fw-0);
+                    transition: .3s;
+                    &:hover {
+                        color: $color-default-theme;
+                    }
+                }
+            }
+            .blog__date {
+                margin-bottom: 25px;
+                color: $color-gray-9;
+                font-size: $fs-0 - 1;
+                letter-spacing: $letter-spacing-1 - 3;
+                text-transform: uppercase;
+                a {
+                    transition: .3s;
+                    text-transform: uppercase;
+                    @include styleText($color-gray-9, $fs-0 - 1, $fw-2);
+                    &:after {
+                        padding: $pd-6 + 3;
+                        padding-left: $pd-2;
+                        content: '|';
+                    }
+                    &:hover {
+                        color: $color-default-theme;
+                    }
+                }
+            }
+            .blog__readMore {
+                text-transform: uppercase;
+                color: $color-gray-10;
+                letter-spacing: $letter-spacing-0 + 0.5;
+                transition: .3s;
+                &:hover {
+                    color: $color-black-2;
+                }
+                i {
+                    margin-left: $mg-7 + 3;
+                    font-size: $fs-0;
+                }
+            }
+        }
+    }
+    @include reponsive("medium") {
+        .blog__post {
+            margin-bottom: $mg-1;
+            .blog__desk {
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.portfolio {
+    padding-bottom: 0;
+    .portfolio__top {
+        @extend %inline-block;
+    }
+    .portfolio__bottom {
+        width: 100%;
+        .portfolio__filter {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 0;
+            padding: 0;
+            .control {
+                display: inline-block;
+                @include styleText($color-gray-0, $fs-0 + 1, $fw-0);
+                letter-spacing: $letter-spacing-1 - 2;
+                margin: 0 $mg-5;
+                cursor: pointer;
+                transition: 0.5s;
+                &:hover {
+                    color: $color-black-2;
+                }
+            }
+            .mixitup-control-active {
+                color: $color-black-2
+            }
+        }
+        .portfolio__container {
+            width: 100%;
+            margin: $mg-1 0 0;
+            .mix {
+                padding: 0;
+                .portfolio__item {
+                    width: 100%;
+                    position: relative;
+                    img {
+                        @extend %img;
+                    }
+                    .portfolio__hover {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: 0;
+                        transition: .3s;
+                        border: 20px solid $color-gray-7;
+                        background: $color-white-1;
+                        opacity: 0;
+                        .portfolio__icon {
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            transition: .3s;
+                            transform: translateY(45%);
+                            text-align: center;
+                            opacity: 0;
+                            a {
+                                color: $color-black-2;
+                                font-size: 30px;
+                            }
+                        }
+                        .portfolio__desc {
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            transform: translateY(-55%);
+                            opacity: 0;
+                            transition: .3s;
+                            text-align: center;
+                            h4 {
+                                margin-bottom: $mg-4;
+                                letter-spacing: $letter-spacing-1 -1;
+                                font-size: $fs-0 + 1;
+                                a {
+                                    color: $color-black-2;
+                                    transition: .5s;
+                                    &:hover {
+                                        color: $color-default-theme;
+                                    }
+                                }
+                            }
+                            p {
+                                letter-spacing: 3px;
+                                font-size: $fs-0 - 1;
+                                margin-bottom: 0;
+                                a {
+                                    color: $color-black-5;
+                                    transition: .5s;
+                                    &:hover {
+                                        color: $color-default-theme;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .portfolio__hover {
+                            opacity: 1;
+                            .portfolio__icon {
+                                opacity: 1;
+                                top: 40%;
+                                margin-top: -55px;
+                            }
+                            .portfolio__desc {
+                                opacity: 1;
+                                bottom: 50%;
+                                margin-bottom: -90px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include reponsive("medium") {
+        .portfolio__bottom {
+            .portfolio__filter {
+                .control {
+                    line-height: $line-height-4 - 5;
+                }
+            }
+        }
+    }
+    @include reponsive ("screen-2") {
+        .portfolio__bottom {
+            .mix {
+                width: 100% !important;
+            }
+        }
+    }
+}

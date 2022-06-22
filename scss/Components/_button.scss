@@ -1,0 +1,9 @@
+.button-dark {
+    @include styleButton ($color-white-0, $color-black-2, $fs-0 + 1, $pd-2 + 5, $pd-0, $fw-0);
+    @include hoverButton ($color-white-0, $color-default-theme);
+}
+
+.button-theme-color {
+    @include styleButton ($color-white-0, $color-default-theme, $fs-0 + 1, $pd-2 + 5, $pd-0, $fw-0);
+    @include hoverButton($color-black-2, $color-white-0);
+}

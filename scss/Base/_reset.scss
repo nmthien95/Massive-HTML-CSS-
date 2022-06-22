@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: $color-black-4;
+    font-size: $fs-4;
+    font-weight: $fw-2;
+    line-height: $line-height-2;
+    text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 30px;
+    font-weight: $fw-0;
+    line-height: $line-height-2;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: $letter-spacing-1 - 3;
+}
+
+h5,
+h6 {
+    letter-spacing: $letter-spacing-0 + 0.5;
+}
+
+p {
+    margin-bottom: $mg-3;
+    color: $color-black-1;
+    line-height: $line-height-1;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    width: 100%;
+    padding: $pd-1 0;
+    display: inline-block;
+}
+
+.myCol {
+    padding: 0 $pd-0;
+}
+
+@include reponsive ("medium") {
+    .section {
+        padding: $pd-3 + 10 0;
+    }
+    h1 {
+        font-size: $fs-3 + 2 !important;
+    }
+    h3 {
+        font-size: $fs-5;
+    }
+    h2 {
+        font-size: $fs-2 !important;
+    }
+}

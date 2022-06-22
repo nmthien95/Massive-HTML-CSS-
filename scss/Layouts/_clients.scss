@@ -1,0 +1,13 @@
+.clients {
+    .clients__content {
+        padding: 0 $pd-0;
+        #clients-carousel {
+            .item {
+                margin: $mg-0;
+                img {
+                    @extend %img;
+                }
+            }
+        }
+    }
+}

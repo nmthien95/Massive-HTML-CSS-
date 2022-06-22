@@ -1,0 +1,49 @@
+ .testimonial {
+     .testimonial__content {
+         width: 67%;
+         margin: 0 auto;
+         #tst {
+             .item {
+                 margin: $mg-0;
+                 .testimonial__thumb {
+                     display: inline-block;
+                     width: 100px;
+                     height: auto;
+                     margin-bottom: $mg-0;
+                     img {
+                         @extend %img;
+                         border-radius: 50%;
+                     }
+                 }
+                 .testimonial__text {
+                     P {
+                         font-size: $fs-4 + 1;
+                         font-style: italic;
+                         line-height: $line-height-1;
+                     }
+                     .testimonial__name {
+                         margin-top: $mg-4;
+                         letter-spacing: $letter-spacing-1 - 3;
+                         @include styleText($color-black-2, $fs-4 - 1, $fw-0);
+                         span {
+                             display: block;
+                             @include styleText($color-gray-11, $fs-0 - 1, $fw-0);
+                         }
+                     }
+                 }
+             }
+         }
+     }
+     @include reponsive("extra-large") {
+         .testimonial__content {
+             width: 100%;
+         }
+     }
+ }
+ 
+ hr {
+     margin: 0;
+     border: 0;
+     border-top: 1px solid #eee;
+     opacity: 1;
+ }
